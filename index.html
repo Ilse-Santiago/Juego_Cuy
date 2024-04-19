@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="./app.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+        <title>Piedra, Papel o Tijeras</title>
+        
+    </head>
+    <body>
+        <section class="encabezado">
+            <h1 class="titulo">Piedra, Papel o Tijeras <br>"Cui-Cui"</h1>    
+            <h2 id="mensaje">Selecciona una opción:</h2>           
+        </section>
+        <section class="eleccion-Jugador">
+            
+            <div class="contenedor-tarjetas"> 
+
+                <input type="radio" name="objeto" id="piedra" class="input-objeto"/>
+                <label for="piedra" class="tarjetas">
+                    <p>Piedra-Cuy</p>
+                    <img src="./img/piedra.png" alt="piedra">
+                </label>
+                  
+                <input type="radio" name="objeto" id="papel" class="input-objeto"/>
+                <label for="papel" class="tarjetas" >
+                    <p>Cuyi-Papel</p>
+                    <img src="./img/papel.png" alt="papel">
+                </label>
+
+                <input type="radio" name="objeto" id="tijeras" class="input-objeto"/>
+                <label for="tijeras" class="tarjetas">
+                    <p>Corta-Cuy</p>
+                    <img src="./img/scissors.png" alt="tijeras">
+                </label>
+
+            </div>
+            <button id="boton-seleccionar-objeto" onclick="iniciarJuego()">Seleccionar</button>
+        </section>
+        <section class="combate" hidden>
+            <p id="imagen-jugador"></p>
+            <p id="imagen-enemigo"></p>
+            
+        </section>      
+        <section class="resultado-del-juego">
+            <p id="resultado"></p>
+            <p id="puntaje">Victorias: <span id="victorias">0</span> / Derrotas: <span id="perdidas">0</span> </p>
+            <button id="boton-continuar" onclick="continuarJuego()" hidden>Seguir Jugando</button>
+            <button id="boton-reiniciar" onclick="reiniciarJuego()" hidden>Reiniciar juego</button>
+        </section>     
+        <section id="pie-de-pag">
+            <p id="pie-pag">By Boopsy🌸</p>
+        </section>
+       
+    </body>
+</html>
